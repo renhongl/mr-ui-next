@@ -9,8 +9,8 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "release": "npm test && npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags",
-    "lint": "eslint -c .eslintrc.js 'src/**/*.js'",
-    "lint:fix": "eslint --fix -c .eslintrc.js 'src/**/*.js' --fix",
+    "lint": "eslint -c .eslintrc.js src/**/*.js",
+    "lint:fix": "eslint --fix -c .eslintrc.js src/**/*.js --fix",
     "build:self": "rollup -c config/rollup.config.js",
     "build:esm": "rollup -c config/rollup.config.esm.js",
     "build:aio": "rollup -c config/rollup.config.aio.js",
